@@ -1,9 +1,9 @@
-const CACHE_NAME = 'smmc-cache-v1';
+const CACHE_NAME = 'smmc-cache-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
   './manifest.json',
-  './icon.png'
+  './icon3.png'
 ];
 
 self.addEventListener('install', (event) => {

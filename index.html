@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SMMC Portal - Walid Mahmoud</title>
     
-    <!-- Métadonnées & Configuration PWA -->
-    <meta name="description" content="Portail financier et gestion de stock marchand SMMC">
-    <link rel="icon" type="image/png" href="./icon.png">
-    <link rel="apple-touch-icon" href="./icon.png">
-    <link rel="manifest" href="./manifest.json">
+    <!-- Configuration PWA & Favicon -->
+    <meta name="description" content="Portail financier et gestion de stock marchande SMMC">
+    <link rel="icon" type="image/png" href="icon3.png">
+    <link rel="apple-touch-icon" href="icon3.png">
+    <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#0b0f19">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -768,7 +768,7 @@
         
         <!-- En-tête avec Logo Image -->
         <div class="app-brand-header">
-            <img src="./icon.png" alt="SMMC Icon" class="app-main-logo" onerror="this.style.display='none'">
+            <img src="icon3.png" alt="SMMC Icon" class="app-main-logo" onerror="this.style.display='none'">
             <h1>SMMC Portal | Walid Mahmoud</h1>
         </div>
 
@@ -1443,10 +1443,10 @@
             updateAnalyticsMoney();
         };
 
-        /* Enregistrement du Service Worker (Compatibilité PWA & PWABuilder) */
+        /* Enregistrement Service Worker */
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
+                navigator.serviceWorker.register('sw.js')
                     .then(reg => console.log('Service Worker enregistré sur le scope:', reg.scope))
                     .catch(err => console.error('Erreur Service Worker:', err));
             });

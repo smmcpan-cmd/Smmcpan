@@ -3,36 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>SMMC Portal - Walid Mahmoud</title>
+    <title>SMMC Portal - Saber Aballagh</title>
     
-    <!-- Configuration PWA & Favicon -->
-    <meta name="description" content="Portail financier et gestion de stock marchande SMMC">
-    <link rel="icon" type="image/png" href="icon3.png">
-    <link rel="apple-touch-icon" href="icon3.png">
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#0b0f19">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Favicon & App Icon Vectorielle Intégrée (Noir et Or) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23111111'/%3E%3Cstop offset='100%25' stop-color='%23050505'/%3E%3C/linearGradient%3E%3ClinearGradient id='p' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f3d179'/%3E%3Cstop offset='100%25' stop-color='%23aa8c2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='115' fill='url(%23bg)'/%3E%3Cpath d='M256,105 L375,165 L375,305 L256,385 L137,305 L137,165 Z' fill='%231a1a1a' stroke='url(%23p)' stroke-width='8'/%3E%3Cpath d='M200,160 L340,160 C365,160 365,220 340,220 L220,220 C165,220 165,330 220,330 L330,330' fill='none' stroke='url(%23p)' stroke-width='28' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M275,330 L330,330' fill='none' stroke='%2310b981' stroke-width='28' stroke-linecap='round'/%3E%3Ccircle cx='200' cy='160' r='16' fill='%23d4af37'/%3E%3Ccircle cx='330' cy='330' r='16' fill='%2310b981'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23111111'/%3E%3Cstop offset='100%25' stop-color='%23050505'/%3E%3C/linearGradient%3E%3ClinearGradient id='p' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f3d179'/%3E%3Cstop offset='100%25' stop-color='%23aa8c2c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='512' height='512' rx='115' fill='url(%23bg)'/%3E%3Cpath d='M256,105 L375,165 L375,305 L256,385 L137,305 L137,165 Z' fill='%231a1a1a' stroke='url(%23p)' stroke-width='8'/%3E%3Cpath d='M200,160 L340,160 C365,160 365,220 340,220 L220,220 C165,220 165,330 220,330 L330,330' fill='none' stroke='url(%23p)' stroke-width='28' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M275,330 L330,330' fill='none' stroke='%2310b981' stroke-width='28' stroke-linecap='round'/%3E%3Ccircle cx='200' cy='160' r='16' fill='%23d4af37'/%3E%3Ccircle cx='330' cy='330' r='16' fill='%2310b981'/%3E%3C/svg%3E">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
-            --dark-bg: #0b0f19;
-            --card-bg: rgba(17, 24, 39, 0.85);
-            --card-subtle: #1f293d;
-            --primary: #3b82f6;
-            --primary-hover: #2563eb;
-            --primary-light: rgba(59, 130, 246, 0.12);
+            --dark-bg: #050505; /* Noir profond */
+            --card-bg: rgba(17, 17, 17, 0.85); /* Gris très foncé */
+            --card-subtle: #1a1a1a; 
+            --primary: #d4af37; /* Or */
+            --primary-hover: #aa8c2c; /* Or sombre */
+            --primary-light: rgba(212, 175, 55, 0.12);
             --text-white: #f8fafc;
-            --text-gray: #94a3b8;
-            --border-color: rgba(255, 255, 255, 0.08);
-            --border-focus: rgba(59, 130, 246, 0.4);
+            --text-gray: #a3a3a3;
+            --border-color: rgba(212, 175, 55, 0.15); /* Bordure subtile or */
+            --border-focus: rgba(212, 175, 55, 0.4);
             --success: #10b981;
             --success-bg: rgba(16, 185, 129, 0.12);
             --danger: #ef4444;
             --danger-bg: rgba(239, 68, 68, 0.12);
             --warning: #f59e0b;
-            --info: #0ea5e9;
+            --info: #d4af37; /* Adapté en or */
         }
 
         * { 
@@ -45,78 +40,14 @@
             background-color: var(--dark-bg);
             color: var(--text-white);
             margin: 0;
-            padding-top: 36px;
+            padding-top: 16px;
             padding-bottom: 95px;
             line-height: 1.4;
             position: relative;
             overflow-x: hidden;
         }
 
-        /* Live Stock Ticker */
-        .live-ticker-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 36px;
-            background: #0d1322;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            z-index: 1000;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-        }
-
-        .ticker-label {
-            background: var(--card-subtle);
-            color: var(--info);
-            font-size: 10px;
-            font-weight: 700;
-            padding: 0 12px;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            z-index: 2;
-            border-right: 1px solid var(--border-color);
-            flex-shrink: 0;
-        }
-
-        .ticker-track {
-            display: flex;
-            white-space: nowrap;
-            animation: marquee 25s linear infinite;
-        }
-        .ticker-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0%); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .ticker-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 11px;
-            padding: 0 18px;
-            color: var(--text-gray);
-        }
-        .ticker-item strong {
-            color: #fff;
-        }
-        .ticker-price {
-            color: var(--success);
-            font-weight: 700;
-            font-size: 11px;
-        }
-
-        /* Ambient Glow */
+        /* Ambient Glow Subtil (Doré) */
         .ambient-glow-1 {
             position: fixed;
             top: -120px;
@@ -124,7 +55,7 @@
             transform: translateX(-50%);
             width: 420px;
             height: 420px;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
             filter: blur(60px);
             z-index: 0;
             pointer-events: none;
@@ -138,7 +69,7 @@
             z-index: 1;
         }
 
-        /* Branding Header */
+        /* App Branding Header */
         .app-brand-header {
             display: flex;
             align-items: center;
@@ -150,9 +81,8 @@
         .app-main-logo {
             width: 38px;
             height: 38px;
-            border-radius: 10px;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+            flex-shrink: 0;
+            filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.3));
         }
 
         .app-brand-header h1 { 
@@ -163,10 +93,10 @@
             font-weight: 700;
         }
 
-        /* Status Badge */
+        /* Pro Badge */
         .vip-status {
             background: var(--primary-light);
-            border: 1px solid rgba(59, 130, 246, 0.25);
+            border: 1px solid rgba(212, 175, 55, 0.25);
             padding: 10px;
             border-radius: 50px;
             display: flex; 
@@ -178,7 +108,7 @@
             font-weight: 700; 
             font-size: 11px;
             letter-spacing: 1.5px; 
-            color: #60a5fa;
+            color: var(--primary);
         }
 
         .pulse-dot {
@@ -222,7 +152,7 @@
             padding: 16px; 
             border-radius: 14px; 
             border: 1px solid var(--border-color);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
             position: relative;
         }
 
@@ -259,7 +189,7 @@
         .currency-switch-btn {
             background: var(--card-subtle);
             border: 1px solid var(--border-color);
-            color: #93c5fd;
+            color: var(--primary);
             font-size: 10px;
             font-weight: 700;
             padding: 2px 8px;
@@ -270,7 +200,7 @@
         }
         .currency-switch-btn:hover {
             background: var(--primary);
-            color: #fff;
+            color: #000;
         }
 
         .rate-indicator {
@@ -359,7 +289,7 @@
         .filter-btn.active {
             background: var(--primary-light);
             border-color: var(--primary);
-            color: #60a5fa;
+            color: var(--primary);
             font-weight: 600;
         }
 
@@ -398,7 +328,7 @@
 
         .badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 6px; }
         .badge-paid { color: var(--success); background: var(--success-bg); border: 1px solid rgba(16, 185, 129, 0.2); }
-        .badge-pending { color: var(--info); background: rgba(14, 165, 233, 0.12); border: 1px solid rgba(14, 165, 233, 0.2); }
+        .badge-pending { color: var(--primary); background: var(--primary-light); border: 1px solid rgba(212, 175, 55, 0.2); }
 
         .load-more-btn {
             width: 100%;
@@ -480,7 +410,7 @@
         .copy-pill {
             background: var(--card-subtle);
             border: 1px solid var(--border-color);
-            color: #93c5fd;
+            color: var(--primary);
             padding: 3px 8px;
             border-radius: 5px;
             font-size: 10px;
@@ -488,7 +418,7 @@
             margin-left: 6px;
             transition: all 0.2s;
         }
-        .copy-pill:hover { background: var(--primary); color: #fff; }
+        .copy-pill:hover { background: var(--primary); color: #000; }
 
         /* Analytics Section */
         .analytics-container {
@@ -552,23 +482,23 @@
         }
 
         .btn-primary { 
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: #fff; 
+            background: linear-gradient(135deg, #d4af37, #aa8c2c);
+            color: #000; 
             border: none; 
             padding: 14px; 
             border-radius: 12px; 
-            font-weight: 700; 
+            font-weight: 800; 
             width: 100%; 
             cursor: pointer; 
             font-size: 14px; 
             margin-top: 10px;
-            box-shadow: 0 4px 14px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 4px 14px rgba(170, 140, 44, 0.25);
             transition: all 0.2s;
         }
         .btn-primary:active { transform: scale(0.98); }
         .btn-primary:hover { 
-            filter: brightness(1.08);
-            box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+            filter: brightness(1.1);
+            box-shadow: 0 6px 18px rgba(170, 140, 44, 0.35);
         }
 
         .btn-outline {
@@ -594,21 +524,21 @@
             top: 0; 
             width: 100%; 
             height: 100%; 
-            background: rgba(0, 0, 0, 0.7); 
+            background: rgba(0, 0, 0, 0.8); 
             backdrop-filter: blur(8px); 
             align-items: center; 
             justify-content: center; 
             padding: 20px; 
         }
         .modal-content { 
-            background: #111827;
+            background: #0d0d0d;
             border: 1px solid var(--border-color); 
             border-radius: 18px; 
             width: 100%; 
             max-width: 420px; 
             padding: 24px; 
             position: relative; 
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
         }
         .modal-header { 
             color: var(--text-white); 
@@ -646,7 +576,7 @@
             transform: translateY(-50%);
             background: rgba(255, 255, 255, 0.08);
             border: 1px solid var(--border-color);
-            color: #93c5fd;
+            color: var(--primary);
             padding: 4px 8px;
             font-size: 11px;
             font-weight: 700;
@@ -684,7 +614,7 @@
         /* Toast Component */
         #toastContainer {
             position: fixed;
-            top: 50px;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 2000;
@@ -696,7 +626,7 @@
             max-width: 380px;
         }
         .toast {
-            background: #1e293b;
+            background: #1a1a1a;
             color: #fff;
             border: 1px solid var(--border-color);
             padding: 12px 16px;
@@ -705,7 +635,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.6);
             animation: slideDown 0.3s ease-out forwards;
         }
         .toast.success { border-color: var(--success); }
@@ -721,7 +651,7 @@
             bottom: 0;
             left: 0;
             width: 100%;
-            background: rgba(13, 19, 34, 0.95);
+            background: rgba(5, 5, 5, 0.95);
             backdrop-filter: blur(16px);
             border-top: 1px solid var(--border-color);
             display: flex;
@@ -743,7 +673,7 @@
         }
         .nav-item i { font-size: 17px; }
         .nav-item.active { 
-            color: #60a5fa; 
+            color: var(--primary); 
             font-weight: 700; 
         }
 
@@ -753,23 +683,32 @@
 </head>
 <body>
 
-    <!-- Bandeau Boursier Flottant en Direct -->
-    <div class="live-ticker-container">
-        <div class="ticker-label">
-            <span class="pulse-dot" style="width: 6px; height: 6px;"></span> LIVE
-        </div>
-        <div class="ticker-track" id="tickerContent"></div>
-    </div>
-
     <div class="ambient-glow-1"></div>
     <div id="toastContainer"></div>
 
     <div class="main-content" id="view-home">
         
-        <!-- En-tête avec Logo Image -->
+        <!-- En-tête avec Logo Vectoriel de Marque (Noir et Or) -->
         <div class="app-brand-header">
-            <img src="icon3.png" alt="SMMC Icon" class="app-main-logo" onerror="this.style.display='none'">
-            <h1>SMMC Portal | Walid Mahmoud</h1>
+            <svg class="app-main-logo" viewBox="0 0 512 512">
+                <defs>
+                    <linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#1a1a1a"/>
+                        <stop offset="100%" stop-color="#050505"/>
+                    </linearGradient>
+                    <linearGradient id="logoPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f3d179"/>
+                        <stop offset="100%" stop-color="#aa8c2c"/>
+                    </linearGradient>
+                </defs>
+                <rect width="512" height="512" rx="120" fill="url(#logoBg)" stroke="rgba(212,175,55,0.15)" stroke-width="8"/>
+                <path d="M256,105 L375,165 L375,305 L256,385 L137,305 L137,165 Z" fill="#111111" stroke="url(#logoPrimary)" stroke-width="12"/>
+                <path d="M200,160 L340,160 C365,160 365,220 340,220 L220,220 C165,220 165,330 220,330 L330,330" fill="none" stroke="url(#logoPrimary)" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M275,330 L330,330" fill="none" stroke="#10b981" stroke-width="30" stroke-linecap="round"/>
+                <circle cx="200" cy="160" r="18" fill="#d4af37"/>
+                <circle cx="330" cy="330" r="18" fill="#10b981"/>
+            </svg>
+            <h1>SMMC Portal | Saber Aballagh</h1>
         </div>
 
         <div class="vip-status">
@@ -795,19 +734,19 @@
                         </button>
                     </div>
                 </div>
-                <div class="value" id="currentBalanceDisplay">8 862,43 $</div>
+                <div class="value" id="currentBalanceDisplay">43 610,55 $</div>
                 <div class="rate-indicator">1 $ = 9,24 MAD</div>
             </div>
             <div class="card">
                 <div class="card-header-flex">
-                    <h3>Total Commandes</h3>
-                    <i class="fas fa-arrow-trend-up" style="color: var(--primary); font-size: 12px;"></i>
+                    <h3>Stock Restant (IPTV)</h3>
+                    <i class="fas fa-box" style="color: var(--primary); font-size: 12px;"></i>
                 </div>
-                <div class="value">972 Ordres</div>
+                <div class="value">157 Comptes</div>
             </div>
         </div>
 
-        <!-- Activity Sparkline -->
+        <!-- Activity Sparkline (Adapté en Or) -->
         <div class="chart-box">
             <div class="chart-header">
                 <span>Volume financier (7 derniers jours)</span>
@@ -816,12 +755,12 @@
             <svg class="chart-svg" viewBox="0 0 300 60">
                 <defs>
                     <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
-                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.0"/>
+                        <stop offset="0%" stop-color="#d4af37" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#d4af37" stop-opacity="0.0"/>
                     </linearGradient>
                 </defs>
                 <path d="M0,50 Q40,40 70,45 T140,20 T210,30 T280,10 L280,60 L0,60 Z" fill="url(#chartGrad)"/>
-                <path d="M0,50 Q40,40 70,45 T140,20 T210,30 T280,10" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M0,50 Q40,40 70,45 T140,20 T210,30 T280,10" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
                 <circle cx="280" cy="10" r="4" fill="#10b981"/>
             </svg>
         </div>
@@ -852,97 +791,50 @@
         <div class="section-title" id="section-banking" style="margin-top: 25px;"><i class="fas fa-building-columns" style="color: var(--primary);"></i> Virements & Retraits Traités</div>
         <div class="bank-history">
             
-            <!-- Retrait 1 -->
-            <div class="bank-row clickable" onclick="openDetailsModal('24/08/2026', '25/08/2026', 'Virement Bancaire (SWIFT)', 'SW-9982104', 3200)">
-                <div style="display: flex; align-items: center;">
-                    <div class="bank-icon icon-withdrawal"><i class="fas fa-arrow-up-right-from-square"></i></div>
-                    <div>
-                        <div style="font-size: 13px; font-weight: 600;">Retrait Bancaire SWIFT</div>
-                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 24/08/2026</div>
-                        <div style="font-size: 11px; color: var(--success);"><i class="fas fa-check-circle"></i> Virement exécuté (Détails)</div>
-                    </div>
-                </div>
-                <div class="bank-amount-col">
-                    <span class="bank-amount-usd">-3 200,00 $</span>
-                    <span class="bank-amount-mad">≈ -29 568,00 DH</span>
-                </div>
-            </div>
-
-            <!-- Retrait 2 -->
-            <div class="bank-row clickable" onclick="openDetailsModal('12/08/2026', '13/08/2026', 'Virement Bancaire Direct', 'VIR-8834211', 2450)">
+            <!-- Retrait Unique 13/05/2026 -->
+            <div class="bank-row clickable" onclick="openDetailsModal('12/05/2026', '13/05/2026', 'Virement Bancaire Direct', 'VIR-1029384', 400)">
                 <div style="display: flex; align-items: center;">
                     <div class="bank-icon icon-withdrawal"><i class="fas fa-arrow-up-right-from-square"></i></div>
                     <div>
                         <div style="font-size: 13px; font-weight: 600;">Retrait Compte Bancaire</div>
-                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 12/08/2026</div>
+                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 13/05/2026</div>
                         <div style="font-size: 11px; color: var(--success);"><i class="fas fa-check-circle"></i> Virement exécuté (Détails)</div>
                     </div>
                 </div>
                 <div class="bank-amount-col">
-                    <span class="bank-amount-usd">-2 450,00 $</span>
-                    <span class="bank-amount-mad">≈ -22 638,00 DH</span>
+                    <span class="bank-amount-usd">-400,00 $</span>
+                    <span class="bank-amount-mad">≈ -3 696,00 DH</span>
                 </div>
             </div>
 
-            <!-- Retrait 3 -->
-            <div class="bank-row clickable" onclick="openDetailsModal('02/08/2026', '03/08/2026', 'Virement Bancaire Direct', 'VIR-7729104', 1800)">
+            <!-- Retrait Chèque Annulé -->
+            <div class="bank-row clickable" onclick="openDetailsModal('12/09/2026', '14/09/2026', 'Retrait par Chèque', 'CHQ-559281', 10000)">
                 <div style="display: flex; align-items: center;">
-                    <div class="bank-icon icon-withdrawal"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                    <div class="bank-icon" style="background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.2);"><i class="fas fa-money-check"></i></div>
                     <div>
-                        <div style="font-size: 13px; font-weight: 600;">Retrait Compte Bancaire</div>
-                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 02/08/2026</div>
-                        <div style="font-size: 11px; color: var(--success);"><i class="fas fa-check-circle"></i> Virement exécuté (Détails)</div>
+                        <div style="font-size: 13px; font-weight: 600;">Retrait par Chèque</div>
+                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 14/09/2026</div>
+                        <div style="font-size: 11px; color: var(--danger);"><i class="fas fa-times-circle"></i> Annulé</div>
                     </div>
                 </div>
                 <div class="bank-amount-col">
-                    <span class="bank-amount-usd">-1 800,00 $</span>
-                    <span class="bank-amount-mad">≈ -16 632,00 DH</span>
+                    <span class="bank-amount-usd" style="text-decoration: line-through; color: var(--text-gray);">-10 000,00 $</span>
+                    <span class="bank-amount-mad" style="text-decoration: line-through; color: var(--text-gray);">≈ -92 400,00 DH</span>
                 </div>
             </div>
 
-            <!-- Retrait 4 -->
-            <div class="bank-row clickable" onclick="openDetailsModal('19/07/2026', '20/07/2026', 'Virement Bancaire (SWIFT)', 'SW-6629012', 1350)">
-                <div style="display: flex; align-items: center;">
-                    <div class="bank-icon icon-withdrawal"><i class="fas fa-arrow-up-right-from-square"></i></div>
-                    <div>
-                        <div style="font-size: 13px; font-weight: 600;">Retrait Bancaire SWIFT</div>
-                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 19/07/2026</div>
-                        <div style="font-size: 11px; color: var(--success);"><i class="fas fa-check-circle"></i> Virement exécuté (Détails)</div>
-                    </div>
-                </div>
-                <div class="bank-amount-col">
-                    <span class="bank-amount-usd">-1 350,00 $</span>
-                    <span class="bank-amount-mad">≈ -12 474,00 DH</span>
-                </div>
-            </div>
-            
-            <!-- Retrait 5 -->
-            <div class="bank-row clickable" onclick="openDetailsModal('01/07/2026', '02/07/2026', 'Virement Bancaire Direct', 'VIR-5510293', 1000)">
-                <div style="display: flex; align-items: center;">
-                    <div class="bank-icon icon-withdrawal"><i class="fas fa-arrow-up-right-from-square"></i></div>
-                    <div>
-                        <div style="font-size: 13px; font-weight: 600;">Retrait Compte Bancaire</div>
-                        <div style="font-size: 12px; color: var(--text-gray);">Attijariwafa Bank • 01/07/2026</div>
-                        <div style="font-size: 11px; color: var(--success);"><i class="fas fa-check-circle"></i> Virement exécuté (Détails)</div>
-                    </div>
-                </div>
-                <div class="bank-amount-col">
-                    <span class="bank-amount-usd">-1 000,00 $</span>
-                    <span class="bank-amount-mad">≈ -9 240,00 DH</span>
-                </div>
-            </div>
         </div>
 
-        <!-- Section Paramètres de Retrait -->
+        <!-- Section Retrait de fonds -->
         <div class="section-title" style="margin-top: 25px;"><i class="fas fa-paper-plane" style="color: var(--primary);"></i> Paramètres de Retrait</div>
         <div class="withdraw-box">
             <div class="withdraw-bank"><i class="fas fa-landmark"></i> Attijariwafa Bank</div>
             <div class="withdraw-info">
-                <span>Titulaire : Walid Mahmoud</span>
+                <span>Titulaire : Saber Aballagh</span>
             </div>
             <div class="withdraw-info">
-                <span>RIB : <span id="ribValue">007450000713530040057108</span></span>
-                <button class="copy-pill" onclick="copyToClipboard('007450000713530040057108', 'RIB copié !')">
+                <span>RIB : <span id="ribValue">007450000713530040059267</span></span>
+                <button class="copy-pill" onclick="copyToClipboard('007450000713530040059267', 'RIB copié !')">
                     <i class="fas fa-copy"></i> Copier
                 </button>
             </div>
@@ -965,11 +857,11 @@
                 </div>
                 <div class="analytic-tile">
                     <span class="analytic-tile-label">Panier Moyen</span>
-                    <span class="analytic-tile-val dynamic-money" data-usd="26.00">26,00 $</span>
+                    <span class="analytic-tile-val dynamic-money" data-usd="35.00">35,00 $</span>
                 </div>
                 <div class="analytic-tile">
                     <span class="analytic-tile-label">Taux d'Exécution</span>
-                    <span class="analytic-tile-val" style="color: var(--info);">98.4 %</span>
+                    <span class="analytic-tile-val" style="color: var(--primary);">98.4 %</span>
                 </div>
             </div>
 
@@ -981,40 +873,10 @@
                 <div>
                     <div class="dist-item-header">
                         <span>IPTV Smarters Pro</span>
-                        <span style="color: #60a5fa;">42% (152 ventes)</span>
+                        <span style="color: var(--primary);">100% (2362 ventes)</span>
                     </div>
                     <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 42%; background: #3b82f6;"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="dist-item-header">
-                        <span>Netflix Premium 4K</span>
-                        <span style="color: #ef4444;">28% (101 ventes)</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 28%; background: #ef4444;"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="dist-item-header">
-                        <span>Spotify Premium</span>
-                        <span style="color: #10b981;">16% (58 ventes)</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 16%; background: #10b981;"></div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="dist-item-header">
-                        <span>Shahid VIP / Disney+ / PS+</span>
-                        <span style="color: #0ea5e9;">14% (51 ventes)</span>
-                    </div>
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" style="width: 14%; background: #0ea5e9;"></div>
+                        <div class="progress-bar-fill" style="width: 100%; background: var(--primary);"></div>
                     </div>
                 </div>
             </div>
@@ -1032,7 +894,7 @@
             <div class="modal-header">Demande de Retrait</div>
             <div class="input-group">
                 <label>Compte de destination</label>
-                <select disabled><option>Attijariwafa Bank (....7108)</option></select>
+                <select disabled><option>Attijariwafa Bank (....9267)</option></select>
             </div>
             <div class="input-group">
                 <label id="withdrawLabel">Montant à transférer ($)</label>
@@ -1082,31 +944,19 @@
     </nav>
 
     <script>
-        const CURRENT_BALANCE_USD = 8862.43;
+        const CURRENT_BALANCE_USD = 43610.55;
         const EXCHANGE_RATE_MAD = 9.24;
         const TOTAL_ORDERS = 2362;
         const TOTAL_SALES = 362;
         const BATCH_SIZE = 25;
 
-        // SVG Vectors
+        // SVG Vectors (Modifié en couleur Or)
         const APP_SVGS = {
-            netflix: `<svg viewBox="0 0 24 24" fill="#E50914"><path d="M5.398 0v24c1.867-.34 3.738-.724 5.61-1.12V0H5.398zm7.594 0v22.42c1.87-.417 3.737-.87 5.608-1.332V0h-5.608zM0 0v24c1.865-.33 3.73-.703 5.398-1.07V0H0zm18.6 0v20.65c1.87-.48 3.74-.99 5.4-1.52V0h-5.4z"/></svg>`,
-            spotify: `<svg viewBox="0 0 24 24" fill="#1DB954"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.503 17.308c-.215.354-.676.467-1.03.252-2.824-1.725-6.38-2.116-10.57-1.158-.403.092-.806-.16-.898-.564-.092-.403.16-.806.564-.898 4.587-1.048 8.52-.604 11.682 1.338.354.215.467.676.252 1.03zm1.47-3.262c-.27.44-.847.577-1.287.307-3.232-1.986-8.16-2.56-11.984-1.4-1.498.15-1.01-.223-1.16-.72-.15-.498.223-1.01.72-1.16 4.372-1.327 9.805-.688 13.404 1.526.44.27.577.847.307 1.287zm.126-3.41c-3.874-2.3-10.264-2.513-13.98-1.385-.594.18-1.224-.156-1.404-.75-.18-.594.156-1.224.75-1.404 4.268-1.296 11.32-1.047 15.79 1.608.534.317.708 1.013.39 1.547-.316.533-1.012.707-1.546.39z"/></svg>`,
-            iptv: `<svg viewBox="0 0 24 24" fill="#0ea5e9"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12zm-11-2l6-4-6-4v8z"/></svg>`,
-            youtube: `<svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>`,
-            disney: `<svg viewBox="0 0 24 24" fill="#38bdf8"><path d="M11.232 4.408c-1.398 0-2.534.825-2.534 1.84 0 1.348 1.416 2.052 2.378 2.502 1.474.686 2.522 1.583 2.522 2.87 0 2.215-2.22 3.633-4.992 3.633-2.597 0-4.606-1.144-4.606-2.906 0-.327.086-.638.252-.924l.006-.01c.216-.367.574-.632.996-.732.22-.053.454-.06.69-.018.66.115 1.134.62 1.144 1.25.012.784-.606 1.428-1.39 1.442-.047 0-.093-.002-.138-.007.394.63 1.597 1.05 3.046 1.05 1.77 0 3.064-.816 3.064-2.072 0-1.222-.857-1.875-2.42-2.544-1.42-.607-2.48-1.507-2.48-2.828 0-2.09 2.072-3.414 4.472-3.414 1.554 0 2.887.525 3.738 1.446l-1.04 1.082c-.62-.647-1.534-1.06-2.688-1.06z"/></svg>`,
-            shahid: `<svg viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>`,
-            playstation: `<svg viewBox="0 0 24 24" fill="#60a5fa"><path d="M8.583 16.582l5.728 2.096v2.174l-5.728-2.062v-2.208zm14.887 1.62c-.39-1.427-1.92-2.463-3.868-2.618l-3.327-.26v2.14l2.793.226c.995.08 1.547.458 1.547.994 0 .58-.698 1.03-1.693 1.03-1.14 0-2.49-.49-3.456-1.248l-1.19 1.683c1.332 1.042 3.107 1.648 4.883 1.648 2.454 0 4.404-1.348 4.31-3.595zM.005 17.073c.123 1.83 1.777 3.23 4.14 3.518l3.15.385v-2.14l-2.677-.327c-.99-.12-1.503-.526-1.503-1.05 0-.58.647-1.058 1.627-1.058 1.09 0 2.378.46 3.32 1.17l1.19-1.684c-1.303-.984-3.003-1.547-4.73-1.547-2.38 0-4.417 1.25-4.517 2.733zM10.87 2.148v15.71l3.44 1.258V6.837c0-.853.486-1.37 1.21-1.37.747 0 1.233.517 1.233 1.37v6.623l3.44 1.258V6.634c0-2.457-1.785-3.84-4.32-3.84-1.91 0-3.553.82-5 2.19V2.148h-.003z"/></svg>`
+            iptv: `<svg viewBox="0 0 24 24" fill="#d4af37"><path d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12zm-11-2l6-4-6-4v8z"/></svg>`
         };
 
         const DIGITAL_SERVICES = [
-            { name: "IPTV Smarters Pro", tag: "Abonnement 12 Mois", key: "iptv", price: 35.00 },
-            { name: "Netflix Premium 4K", tag: "Compte Privé 1 Mois", key: "netflix", price: 12.00 },
-            { name: "Spotify Premium", tag: "Abonnement 12 Mois", key: "spotify", price: 20.00 },
-            { name: "YouTube Premium", tag: "Compte Individuel 6 Mois", key: "youtube", price: 18.00 },
-            { name: "Disney+ VIP", tag: "Compte 4K 12 Mois", key: "disney", price: 25.00 },
-            { name: "Shahid VIP Sport", tag: "Abonnement 12 Mois", key: "shahid", price: 30.00 },
-            { name: "PlayStation Plus", tag: "Abonnement Deluxe", key: "playstation", price: 45.00 }
+            { name: "IPTV Smarters Pro", tag: "Abonnement 12 Mois", key: "iptv", price: 35.00 }
         ];
 
         let currentCurrency = 'USD';
@@ -1144,7 +994,6 @@
 
             updateBalanceDisplay();
             updateAnalyticsMoney();
-            renderTicker();
 
             displayedSalesCount = 0;
             document.getElementById('sales-history').innerHTML = '';
@@ -1162,32 +1011,17 @@
             });
         }
 
-        function renderTicker() {
-            const tickerContainer = document.getElementById('tickerContent');
-            let itemsHtml = '';
-
-            for (let i = 0; i < 8; i++) {
-                const service = DIGITAL_SERVICES[i % DIGITAL_SERVICES.length];
-                const orderNum = 52380 - i * 3;
-                itemsHtml += `
-                    <div class="ticker-item">
-                        <span style="color:#60a5fa;">●</span>
-                        <span>#ORD-${orderNum}</span>
-                        <strong>${service.name}</strong>
-                        <span class="ticker-price">${formatMoney(service.price)}</span>
-                        <span style="color:var(--text-gray); font-size:10px;">(exécuté)</span>
-                    </div>
-                `;
-            }
-            tickerContainer.innerHTML = itemsHtml + itemsHtml;
-        }
-
         function showToast(message, type = 'success') {
             const container = document.getElementById('toastContainer');
             const toast = document.createElement('div');
             toast.className = `toast ${type}`;
             const icon = type === 'success' ? 'fa-check-circle' : 'fa-circle-exclamation';
-            toast.innerHTML = `<i class="fas ${icon}" style="color:var(--${type});"></i> <span>${message}</span>`;
+            toast.innerHTML = `<i class="fas ${icon}" style="color:var(--${type});"></i> <span style="color:#000; font-weight:600;">${message}</span>`;
+            
+            // Adaptation toast background
+            toast.style.background = type === 'success' ? '#10b981' : '#ef4444';
+            toast.style.borderColor = type === 'success' ? '#059669' : '#b91c1c';
+            
             container.appendChild(toast);
 
             setTimeout(() => {
@@ -1216,11 +1050,11 @@
             ordersData = [];
             for (let i = 0; i < TOTAL_ORDERS; i++) {
                 const isPaid = i < 362;
-                const service = DIGITAL_SERVICES[i % DIGITAL_SERVICES.length];
+                const service = DIGITAL_SERVICES[0];
                 ordersData.push({
                     id: `#ORD-${50000 + i}`,
                     serviceName: service.name,
-                    tag: service.tag,
+                    tag: i === 0 ? "10/09/2026 - Dernier Ordre" : service.tag,
                     svgKey: service.key,
                     status: isPaid ? 'paid' : 'pending',
                     statusLabel: isPaid ? 'Payé' : 'En attente'
@@ -1230,7 +1064,7 @@
 
             salesData = [];
             for (let i = 0; i < TOTAL_SALES; i++) {
-                const service = DIGITAL_SERVICES[i % DIGITAL_SERVICES.length];
+                const service = DIGITAL_SERVICES[0];
                 salesData.push({
                     id: `Vente #${1000 + i}`,
                     serviceName: service.name,
@@ -1350,12 +1184,12 @@
                 <div class="detail-item">
                     <div class="detail-label">Montant transféré</div>
                     <div class="detail-value" style="color:#fff; font-weight: 800; font-size: 15px;">
-                        -${amountUSDFmt} $ <span style="font-size: 12px; color: #94a3b8;">(-${amountMAD} DH)</span>
+                        -${amountUSDFmt} $ <span style="font-size: 12px; color: #a3a3a3;">(-${amountMAD} DH)</span>
                     </div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">Taux appliqué</div>
-                    <div class="detail-value" style="color:#60a5fa; font-weight: 600;">1 $ = ${EXCHANGE_RATE_MAD.toFixed(2)} MAD</div>
+                    <div class="detail-value" style="color:var(--primary); font-weight: 600;">1 $ = ${EXCHANGE_RATE_MAD.toFixed(2)} MAD</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">Date de demande</div>
@@ -1371,12 +1205,12 @@
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">Compte crédité</div>
-                    <div class="detail-value">Attijariwafa Bank (....7108)</div>
+                    <div class="detail-value">Attijariwafa Bank (....9267)</div>
                 </div>
                 <div class="detail-item">
                     <div class="detail-label">Numéro d'opération</div>
                     <div class="detail-value">
-                        <span style="color:#93c5fd; font-family: monospace; letter-spacing: 0.5px;">${ref}</span>
+                        <span style="color:var(--primary); font-family: monospace; letter-spacing: 0.5px;">${ref}</span>
                         <button class="copy-pill" onclick="copyToClipboard('${ref}', 'Référence copiée !')"><i class="fas fa-copy"></i></button>
                     </div>
                 </div>
@@ -1436,21 +1270,11 @@
 
         window.onload = function() {
             buildData();
-            renderTicker();
             renderNextOrders();
             renderNextSales();
             updateBalanceDisplay();
             updateAnalyticsMoney();
         };
-
-        /* Enregistrement Service Worker */
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                    .then(reg => console.log('Service Worker enregistré sur le scope:', reg.scope))
-                    .catch(err => console.error('Erreur Service Worker:', err));
-            });
-        }
     </script>
 </body>
 </html>
